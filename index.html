@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A192F">
+  <title>Seoul Central Mosque — Prayer Display</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Seoul Central Mosque home">
+      <span class="brand-mark">☪</span>
+      <span><b>Seoul Central</b><small>Mosque</small></span>
+    </a>
+    <nav>
+      <a href="#prayer">Prayer</a>
+      <a href="#display">Display</a>
+      <a href="#history">History</a>
+      <a href="#guide">Directions</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" title="Toggle contrast">◐</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">SEOUL · ITAEWON · SOUTH KOREA</span>
+        <h1>A calm, modern<br><span>mosque display.</span></h1>
+        <p>A responsive prayer-time dashboard for Seoul Central Mosque — designed for TV, LED screens, tablets, and phones.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#prayer">View Prayer Times</a>
+          <a class="btn ghost" href="#guide">Get Directions</a>
+        </div>
+      </div>
+      <div class="hero-card glass">
+        <div class="live-row"><span class="live-dot"></span> LIVE LOCAL TIME</div>
+        <div id="clock" class="hero-clock">--:--:--</div>
+        <div id="date" class="muted">Loading…</div>
+        <div class="location-pill">📍 Seoul, South Korea</div>
+      </div>
+    </section>
+
+    <section id="prayer" class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">TODAY'S SCHEDULE</span><h2>Prayer Times</h2></div>
+        <div class="date-box"><span id="hijriDate">Hijri date</span><b id="gregDate">Gregorian date</b></div>
+      </div>
+
+      <div class="next-prayer glass">
+        <div>
+          <span class="eyebrow">NEXT PRAYER</span>
+          <h3 id="nextName">Loading…</h3>
+          <p id="nextTime">--:--</p>
+        </div>
+        <div class="countdown-wrap">
+          <span>STARTS IN</span>
+          <strong id="countdown">--:--:--</strong>
+          <small id="countdownLabel">Using your device's local location</small>
+        </div>
+      </div>
+
+      <div id="prayerGrid" class="prayer-grid"></div>
+      <p class="notice">Prayer times are calculated for the device's current location using a public prayer-time service. For a mosque display, administrators should verify local adjustments with Seoul Central Mosque.</p>
+    </section>
+
+    <section id="display" class="section alt">
+      <div class="section-head">
+        <div><span class="eyebrow">MOSQUE INFORMATION</span><h2>Digital Display</h2></div>
+      </div>
+      <div class="display-grid">
+        <article class="feature-card"><span class="feature-icon">🕌</span><h3>Prayer Countdown</h3><p>Large, distraction-free countdown designed for a TV or LED display.</p></article>
+        <article class="feature-card"><span class="feature-icon">📢</span><h3>Announcements</h3><p>Show mosque notices, khutbah information, events, reminders, and community messages.</p></article>
+        <article class="feature-card"><span class="feature-icon">📖</span><h3>Islamic Content</h3><p>Ready-made slots for Qur'an verses, hadith, duas, Ramadan notices, and educational content.</p></article>
+        <article class="feature-card"><span class="feature-icon">🌙</span><h3>Hijri Calendar</h3><p>Gregorian and Hijri dates are shown together for quick reference.</p></article>
+        <article class="feature-card"><span class="feature-icon">💳</span><h3>Donation / QR</h3><p>Reserved layout for verified donation information or a mosque QR code.</p></article>
+        <article class="feature-card"><span class="feature-icon">📱</span><h3>Responsive</h3><p>Fluid layout adapts from large LED screens down to mobile phones.</p></article>
+      </div>
+    </section>
+
+    <section id="history" class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">THE STORY</span><h2>A Timeline of Seoul Central Mosque</h2></div>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item"><span class="year">1950s</span><div><h3>Islam grows after the Korean War</h3><p>Islam began developing again in Korea after the Korean War, with Turkish military personnel playing a role in early outreach. The Korean Muslim community began to take shape, later developing into the Korean Muslim Federation (KMF).</p></div></article>
+        <article class="timeline-item"><span class="year">1969</span><div><h3>Land grant in Itaewon</h3><p>A 5,000 m² site in Itaewon was granted to support the growing Muslim community and international relations.</p></div></article>
+        <article class="timeline-item"><span class="year">1974</span><div><h3>Construction begins</h3><p>Construction of the mosque began in October 1974, supported by contributions from Muslim countries, with major support reported from Saudi Arabia.</p></div></article>
+        <article class="timeline-item"><span class="year">21 May 1976</span><div><h3>Seoul Central Mosque opens</h3><p>The mosque was officially opened for public use and became an important center for Muslim life, education, and community activities in Korea.</p></div></article>
+        <article class="timeline-item"><span class="year">1990</span><div><h3>Expansion</h3><p>The original two-storey building was expanded to three floors, adding educational and community facilities.</p></div></article>
+      </div>
+    </section>
+
+    <section id="guide" class="section alt">
+      <div class="section-head"><div><span class="eyebrow">VISIT SEOUL CENTRAL MOSQUE</span><h2>Direction Guide</h2></div></div>
+      <div class="guide-grid">
+        <div class="map-card">
+          <div class="map-orb">📍</div>
+          <h3>39 Usadan-ro 10-gil</h3>
+          <p>Yongsan District, Seoul, South Korea<br>Itaewon · Hannam-dong</p>
+          <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Seoul+Central+Mosque%2C+39+Usadan-ro+10-gil%2C+Yongsan-gu%2C+Seoul">Open in Google Maps</a>
+        </div>
+        <div class="route-card">
+          <div class="route-step"><span>01</span><div><b>Subway · Line 6</b><p>Take Subway Line 6 and get off at <strong>Itaewon Station</strong>.</p></div></div>
+          <div class="route-step"><span>02</span><div><b>Exit 3</b><p>Leave through <strong>Exit 3</strong>.</p></div></div>
+          <div class="route-step"><span>03</span><div><b>Walk · ~10 minutes</b><p>Walk uphill through Usadan-ro 10-gil to the mosque's main gate.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="source-box">
+        <span class="eyebrow">CONTENT NOTE</span>
+        <p>Historical text supplied for this project has been presented as an informational timeline. Before public deployment, verify dates and wording with authoritative sources such as the Korean Muslim Federation or Seoul Central Mosque.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>Seoul Central Mosque</b><span>Prayer Display · HTML / CSS / JS / JSON</span></div>
+    <span>Made for a calm, modern mosque experience.</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
